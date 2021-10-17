@@ -4,20 +4,17 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class RulesHelper {
 
-    Logger logger = Logger.getLogger(RulesHelper.class.getName());
-
     public Boolean isValid(String sentence){
         if(checkStartsCapital(sentence)
-        || checkQuotationMarks(sentence)
-        || checkLastCharacterValid(sentence)
-        || checkSinglePeriodCharacter(sentence)||
-        checkNumberStructure(sentence)){
+            && checkQuotationMarks(sentence)
+                && checkLastCharacterValid(sentence)
+                    && checkSinglePeriodCharacter(sentence)
+                        && checkNumberStructure(sentence)){
             System.out.println("Sentence is valid");
             return true;
         }
@@ -47,7 +44,6 @@ public class RulesHelper {
 
     //Rule 3 - Ends with Valid Character
     public Boolean checkLastCharacterValid(String sentence){
-
         int charCount = sentence.length();
 
         Set<Character> validPeriodCharacters = new HashSet<>();
@@ -67,7 +63,7 @@ public class RulesHelper {
         validPeriodCharacters.add('?');
 
         int periodCount = 0;
-        for(char c :sentence.toCharArray()){
+        for(char c : sentence.toCharArray()){
             if(validPeriodCharacters.contains(c))
                 periodCount++;
         }
@@ -91,7 +87,7 @@ public class RulesHelper {
 
     private boolean anyNumberGreaterThan13(List<Integer> matchedIntNumbers) {
         for (int number : matchedIntNumbers) {
-            if(number >= 13){
+            if(number < 13){
                 return false;
             }
         }
