@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="utils.RulesHelperTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-10-17T17:08:31" hostname="DESKTOP-TRKA2LL" time="0.014">
+  <properties/>
+  <testcase name="check_numberStructure_ReturnsFalse()" classname="utils.RulesHelperTest" time="0.014"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
