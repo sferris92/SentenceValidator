@@ -3,7 +3,10 @@ package utils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.logging.Logger;
+
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
 
 class RulesHelperTest {
 
@@ -14,7 +17,7 @@ class RulesHelperTest {
         rulesHelper = new RulesHelper();
     }
 
-
+    // Rule 1 Testcases
     @Test
     void check_FirstCharCapital_ReturnsTrue() {
         String example = "Hello my name is Test.";
@@ -22,23 +25,31 @@ class RulesHelperTest {
     }
 
     @Test
-    void check_FirstCharIsLetter_ReturnsFalse() {
-        String example = " 1 Hello my name is Test.";
+    void check_FirstCharIsLowerCase_ReturnsFalse() {
+        String example = " hello my name is Test.";
         assertFalse(rulesHelper.checkStartsCapital(example));
     }
 
     @Test
+    void check_FirstCharIsNumber_ReturnsFalse() {
+        String example = " 1 Hello my name is Test.";
+        assertFalse(rulesHelper.checkStartsCapital(example));
+    }
+
+    //Rule 2 Testcases
+    @Test
     void check_quotationMarksEven_ReturnsTrue(){
-        String example = "They turned around and said \"I have the high ground\"";
+        String example = "The computer stated \" Do you have a sentence to validate\"";
         assertTrue(rulesHelper.checkQuotationMarks(example));
     }
 
     @Test
     void check_quotationMarksEven_ReturnsFalse(){
-        String example = "They \" turned around and said \"I have the high ground\"";
+        String example = "The computer stated \" Do you have a sentence to validate";
         assertFalse(rulesHelper.checkQuotationMarks(example));
     }
 
+    //Rule 3 Testcases
     @Test
     void check_endsWithValidChar_ReturnsTrue(){
         String example = "Hello my name is Computer.";
@@ -51,6 +62,7 @@ class RulesHelperTest {
         assertFalse(rulesHelper.checkLastCharacterValid(example));
     }
 
+    //Rule 4 Testcases
     @Test
     void check_onePeriodCharacter_ReturnsTrue(){
         String example = "Hello my name is Computer.";
@@ -63,9 +75,10 @@ class RulesHelperTest {
         assertFalse(rulesHelper.checkSinglePeriodCharacter(example));
     }
 
+    //Rule 4 Testcases
     @Test
     void check_numberStructure_ReturnsTrue(){
-        String example = "Numbers 3, 6, 9 and 12 are multiples of 3";
+        String example = "Numbers three, six, nine, twelve and 15 are multiples of three";
         assertTrue(rulesHelper.checkNumberStructure(example));
     }
 
