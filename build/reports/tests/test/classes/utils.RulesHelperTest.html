@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - RulesHelperTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>RulesHelperTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/utils.html">utils</a> &gt; RulesHelperTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">13</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.056s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">check_FirstCharCapital_ReturnsTrue()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">check_FirstCharIsLowerCase_ReturnsFalse()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">check_FirstCharIsNumber_ReturnsFalse()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">check_endsWithInvalidChar_ReturnsFalse()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">check_endsWithValidChar_ReturnsTrue()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">check_isValid_returnsFalse()</td>
+<td class="success">0.007s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">check_isValid_returnsTrue()</td>
+<td class="success">0.011s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">check_numberStructure_ReturnsFalse()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">check_numberStructure_ReturnsTrue()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">check_onePeriodCharacter_ReturnsFalse()</td>
+<td class="success">0.027s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">check_onePeriodCharacter_ReturnsTrue()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">check_quotationMarksEven_ReturnsFalse()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">check_quotationMarksEven_ReturnsTrue()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>Oct 18, 2021 10:56:13 PM utils.RulesHelper checkSinglePeriodCharacter
+WARNING: Rule 4 - Single Period Character Validation Failed.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkStartsCapital
+INFO: Rule 1 - Capital Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkQuotationMarks
+INFO: Rule 2 - Quotation Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkLastCharacterValid
+INFO: Rule 3 - Period Character Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkSinglePeriodCharacter
+WARNING: Rule 4 - Single Period Character Validation Failed.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkStartsCapital
+WARNING: Rule 1 - Capital Validation Failed.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkStartsCapital
+WARNING: Rule 1 - Sentence did not start with a letter.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkStartsCapital
+INFO: Rule 1 - Capital Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkQuotationMarks
+INFO: Rule 2 - Quotation Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkLastCharacterValid
+INFO: Rule 3 - Period Character Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkSinglePeriodCharacter
+INFO: Rule 4 - Single Period Character Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkNumberStructure
+INFO: Rule 5 - Validating Number Structure
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkNumberStructure
+INFO: Rule 5 - Single Period Character Validation Failed.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkStartsCapital
+INFO: Rule 1 - Capital Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkQuotationMarks
+INFO: Rule 2 - Quotation Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkLastCharacterValid
+INFO: Rule 3 - Period Character Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkSinglePeriodCharacter
+INFO: Rule 4 - Single Period Character Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkNumberStructure
+INFO: Rule 5 - Validating Number Structure
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkNumberStructure
+INFO: Rule 5 - Single Period Character Validation Failed.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkLastCharacterValid
+INFO: Rule 3 - Period Character Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkLastCharacterValid
+WARNING: Rule 3 - Period Character Validation Failed.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkStartsCapital
+INFO: Rule 1 - Capital Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkNumberStructure
+INFO: Rule 5 - Validating Number Structure
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkNumberStructure
+INFO: Rule 5 - Single Period Character Validation Failed.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkQuotationMarks
+INFO: Rule 2 - Quotation Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkStartsCapital
+WARNING: Rule 1 - Sentence did not start with a letter.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkNumberStructure
+INFO: Rule 5 - Validating Number Structure
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkNumberStructure
+INFO: Rule 5 - Single Period Character Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkStartsCapital
+WARNING: Rule 1 - Sentence did not start with a letter.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkSinglePeriodCharacter
+INFO: Rule 4 - Single Period Character Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkStartsCapital
+INFO: Rule 1 - Capital Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkQuotationMarks
+INFO: Rule 2 - Quotation Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkLastCharacterValid
+INFO: Rule 3 - Period Character Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkSinglePeriodCharacter
+INFO: Rule 4 - Single Period Character Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkNumberStructure
+INFO: Rule 5 - Validating Number Structure
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkNumberStructure
+INFO: Rule 5 - Single Period Character Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkStartsCapital
+INFO: Rule 1 - Capital Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkQuotationMarks
+INFO: Rule 2 - Quotation Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkLastCharacterValid
+INFO: Rule 3 - Period Character Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkSinglePeriodCharacter
+INFO: Rule 4 - Single Period Character Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkNumberStructure
+INFO: Rule 5 - Validating Number Structure
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkNumberStructure
+INFO: Rule 5 - Single Period Character Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkStartsCapital
+INFO: Rule 1 - Capital Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkQuotationMarks
+INFO: Rule 2 - Quotation Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkLastCharacterValid
+INFO: Rule 3 - Period Character Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkSinglePeriodCharacter
+INFO: Rule 4 - Single Period Character Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkNumberStructure
+INFO: Rule 5 - Validating Number Structure
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkNumberStructure
+INFO: Rule 5 - Single Period Character Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkStartsCapital
+INFO: Rule 1 - Capital Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkQuotationMarks
+INFO: Rule 2 - Quotation Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkLastCharacterValid
+INFO: Rule 3 - Period Character Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkSinglePeriodCharacter
+INFO: Rule 4 - Single Period Character Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkNumberStructure
+INFO: Rule 5 - Validating Number Structure
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkNumberStructure
+INFO: Rule 5 - Single Period Character Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkStartsCapital
+INFO: Rule 1 - Capital Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkQuotationMarks
+INFO: Rule 2 - Quotation Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkLastCharacterValid
+INFO: Rule 3 - Period Character Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkSinglePeriodCharacter
+INFO: Rule 4 - Single Period Character Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkNumberStructure
+INFO: Rule 5 - Validating Number Structure
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkNumberStructure
+INFO: Rule 5 - Single Period Character Validation Successful.
+Oct 18, 2021 10:56:13 PM utils.RulesHelper checkQuotationMarks
+WARNING: Rule 2 - Quotation Validation Failed.
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.1</a> at 18 Oct 2021, 22:56:13</p>
+</div>
+</div>
+</body>
+</html>
