@@ -1,37 +1,28 @@
 import utils.RulesHelper;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 public class SentenceProcessor {
 
+    public void sentenceValidator(){
 
-        public static void main(String[] args) {
+        RulesHelper rulesUtil = new RulesHelper();
+        Logger logger = Logger.getLogger(RulesHelper.class.getName());
 
-                boolean repeatflag = true;
-                Scanner scanner = new Scanner(System.in);
-                RulesHelper rulesUtil = new RulesHelper();
+            System.out.println("Welcome - Please enter a sentence to validate");
+            String sentence = getSentenceInput();
 
-                while(repeatflag){
-                        System.out.println("Please enter a sentence to validate");
-                        String sentence = scanner.nextLine();
-
-                        if(rulesUtil.isValid(sentence)){
-                                System.out.println("Validation Complete - Sentence is valid");
-                                System.out.println("Do you want to enter another Sentence? Y/N?");
-                                String response = scanner.next();
-                                repeatflag = responseCheck(response);
-                        }
-                        else{
-                                System.out.println("Validation Complete - Sentence is NOT valid.");
-                                System.out.println("Do you want to enter another Sentence? Y/N?");
-                                String response = scanner.next();
-                                repeatflag = responseCheck(response);
-                        }
-                }
+            if(rulesUtil.isValid(sentence)){
+                logger.info("Validation Complete - Sentence is valid");
+            }
+            else{
+                logger.warning("Validation Complete - Sentence is NOT valid.");
+            }
         }
 
-        public static Boolean responseCheck(String response){
-                return(response.charAt(0) == 'y');
-        }
+    public String getSentenceInput() {
+        Scanner sc = new Scanner(System.in);
+        return sc.nextLine();
+    }
 }
-
