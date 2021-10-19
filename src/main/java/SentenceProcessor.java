@@ -10,7 +10,7 @@ public class SentenceProcessor {
         RulesHelper rulesUtil = new RulesHelper();
         Logger logger = Logger.getLogger(RulesHelper.class.getName());
 
-            System.out.println("Welcome - Please enter a sentence to validate");
+            System.out.println("Welcome - Please enter a sentence to validate below");
             String sentence = getSentenceInput();
 
             if(rulesUtil.isValid(sentence)){
