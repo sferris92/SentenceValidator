@@ -13,6 +13,7 @@ public class RulesHelper {
 
     Logger logger = Logger.getLogger(RulesHelper.class.getName());
 
+    //Check each Rule - Failures and Successes Logged out in console
     public Boolean isValid(String sentence) {
         if (checkStartsCapital(sentence)
                 && checkQuotationMarks(sentence)
@@ -24,6 +25,11 @@ public class RulesHelper {
         return false;
     }
 
+    private void setUpValidPeriodCharacters(Set<Character> validPeriodCharacters) {
+        validPeriodCharacters.add('.');
+        validPeriodCharacters.add('!');
+        validPeriodCharacters.add('?');
+    }
 
     //Rule1 - String starts with Capital Letter
     public Boolean checkStartsCapital(String sentence) {
@@ -63,9 +69,8 @@ public class RulesHelper {
         int charCount = sentence.length();
 
         Set<Character> validPeriodCharacters = new HashSet<>();
-        validPeriodCharacters.add('.');
-        validPeriodCharacters.add('!');
-        validPeriodCharacters.add('?');
+        setUpValidPeriodCharacters(validPeriodCharacters);
+
         if (validPeriodCharacters.contains(sentence.charAt(charCount - 1))) {
             logger.info("Rule 3 - Period Character Validation Successful.");
             return true;
@@ -78,9 +83,7 @@ public class RulesHelper {
     //Rule 4 - Only one period Character in Sentence
     public Boolean checkSinglePeriodCharacter(String sentence) {
         Set<Character> validPeriodCharacters = new HashSet<>();
-        validPeriodCharacters.add('.');
-        validPeriodCharacters.add('!');
-        validPeriodCharacters.add('?');
+        setUpValidPeriodCharacters(validPeriodCharacters);
 
         int periodCount = 0;
         for (char c : sentence.toCharArray()) {

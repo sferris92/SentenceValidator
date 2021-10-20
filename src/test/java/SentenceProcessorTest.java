@@ -1,35 +1,45 @@
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import utils.RulesHelper;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
-import java.util.Scanner;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.mockito.Mockito.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 class SentenceProcessorTest {
 
-    @Mock
-            Scanner scanner;
+    RulesHelper rulesHelper = new RulesHelper();
+    SentenceProcessor sentenceProcessor = new SentenceProcessor();
 
-    SentenceProcessor sentenceProcessor = mock(SentenceProcessor.class);
-    RulesHelper rulesHelper = mock(RulesHelper.class);
+    @Test
+    void whenUserInputValid_thenReturnSuccessful() {
 
-//    @Test
-//    void whenUserInputYes_repeatFlagTrue() {
-//
-//        scanner = new Scanner(System.in);
-//        String input = "This is a test sentence.";
-//        when(rulesHelper.isValid("testSentence")).thenReturn(true);
-//        when(scanner.nextLine()).thenReturn(input);
-//        sentenceProcessor.main(new String[]{});
-//        verify(rulesHelper,times(1)).isValid("testSentence");
-//
-//    }
+        String input = "This is a test sentence.";
+        InputStream sentenceIn = new ByteArrayInputStream(input.getBytes());
+        System.setIn(sentenceIn);
+
+        sentenceProcessor.sentenceValidator();
+        assertTrue(rulesHelper.isValid(input));
+    }
+
+    @Test
+    void whenUserInputInValid_thenReturnFailure() {
+
+        String input = "This is a test sentence";
+        InputStream sentenceIn = new ByteArrayInputStream(input.getBytes());
+        System.setIn(sentenceIn);
+
+        sentenceProcessor.sentenceValidator();
+        assertFalse(rulesHelper.isValid(input));
+    }
+
+    @Test
+    void whenUserInputsSentence_thenReturnString(){
+        String input = "This is a test sentence.";
+        InputStream sentenceIn = new ByteArrayInputStream(input.getBytes());
+        System.setIn(sentenceIn);
+        assertEquals(input,sentenceProcessor.getSentenceInput());
+    }
 
 
 }
