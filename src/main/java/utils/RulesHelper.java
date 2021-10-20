@@ -13,6 +13,7 @@ public class RulesHelper {
 
     Logger logger = Logger.getLogger(RulesHelper.class.getName());
 
+    //Check each Rule - Failures and Successes Logged out in console
     public Boolean isValid(String sentence) {
         if (checkStartsCapital(sentence)
                 && checkQuotationMarks(sentence)
@@ -29,7 +30,6 @@ public class RulesHelper {
         validPeriodCharacters.add('!');
         validPeriodCharacters.add('?');
     }
-
 
     //Rule1 - String starts with Capital Letter
     public Boolean checkStartsCapital(String sentence) {

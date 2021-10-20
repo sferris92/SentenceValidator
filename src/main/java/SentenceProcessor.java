@@ -7,6 +7,7 @@ public class SentenceProcessor {
 
     public void sentenceValidator(){
 
+        //Initial Message and Success/Failure Log message
         RulesHelper rulesUtil = new RulesHelper();
         Logger logger = Logger.getLogger(RulesHelper.class.getName());
 
@@ -21,6 +22,7 @@ public class SentenceProcessor {
             }
         }
 
+    // Capture User Input
     public String getSentenceInput() {
         Scanner sc = new Scanner(System.in);
         return sc.nextLine();

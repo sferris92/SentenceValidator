@@ -36,6 +36,12 @@ class RulesHelperTest {
         assertFalse(rulesHelper.checkStartsCapital(example));
     }
 
+    @Test
+    void check_multipleCharsCapital_ReturnsTrue() {
+        String example = "HELLO my name is Test.";
+        assertTrue(rulesHelper.checkStartsCapital(example));
+    }
+
     //Rule 2 Testcases
     @Test
     void check_quotationMarksEven_ReturnsTrue(){
@@ -59,6 +65,12 @@ class RulesHelperTest {
     @Test
     void check_endsWithInvalidChar_ReturnsFalse(){
         String example = "Hello my name is Computer";
+        assertFalse(rulesHelper.checkLastCharacterValid(example));
+    }
+
+    @Test
+    void check_endsWithInvalidSpecialChar_ReturnsFalse(){
+        String example = "Hello my name is Computer!@";
         assertFalse(rulesHelper.checkLastCharacterValid(example));
     }
 
